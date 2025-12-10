@@ -28,8 +28,10 @@ const Navbar = () => {
               {links}
             </ul>
           </div>
-          <div className="navbar-end">
-            <NavLink className="btn  btn-secondary" to="/register">Register</NavLink>
+          <div className="navbar-end gap-4">
+            <NavLink className="btn btn-outline btn-secondary" to="/login">Login</NavLink>
+            <NavLink className="btn btn-secondary hover:outline  hover:outline-pink-500" to="/register">Register</NavLink>
+            
           </div>
       </div> 
     );
