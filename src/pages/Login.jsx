@@ -14,15 +14,18 @@ const Login = () => {
   const handleLogin = (e) => {
     e.preventDefault();
     const form = e.target;
+    const Name = form.Name.value;
     const email = form.email.value;
     const password = form.password.value;
 
+
+    // Login user
     loginUser(email, password)
       .then((result) => {
         console.log("Logged in user:", result.user);
         alert("Login successful!");
         form.reset();
-        navigate("/"); // Login successful হলে home page এ redirect
+        navigate("/"); 
       })
       .catch((error) => {
         console.error("Login error:", error);
@@ -30,6 +33,8 @@ const Login = () => {
       });
   };
 
+
+  // Google Login
   const handleGoogleLogin = () => {
     const provider = new GoogleAuthProvider();
     signInWithPopup(auth, provider)

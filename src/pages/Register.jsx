@@ -13,7 +13,7 @@ const Register = () => {
   const handleRegister = (e) => {
     e.preventDefault();
     const form = e.target;
-    const name = form.name.value;
+    const Name = form.Name.value;
     const email = form.email.value;
     const password = form.password.value;
 
@@ -64,7 +64,7 @@ const Register = () => {
             <label className="text-gray-300 font-medium">Full Name</label>
             <input
               type="text"
-              name="name"
+              name="Name"
               placeholder="Enter your name"
               className="input input-bordered w-full mt-1 bg-gray-700 text-white"
               required
