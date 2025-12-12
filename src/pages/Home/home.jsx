@@ -14,14 +14,7 @@ const home = () => {
     return (
         <div>
             <HeroSection />
-            <BrowseCategories />
-            <TrendingServices />
-            <HowItWorks />
-            <TopFreelancers />
-            <Testimonials />
-            <LatestBlog />
-            <StatsCounters />
-            <CTABanner />
+            
         </div>
     );
 };
