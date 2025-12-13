@@ -14,6 +14,9 @@ const home = () => {
     return (
         <div>
             <HeroSection />
+            <BrowseCategories />
+            <TrendingServices />
+            
             
         </div>
     );
