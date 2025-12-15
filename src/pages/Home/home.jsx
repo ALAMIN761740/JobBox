@@ -16,6 +16,10 @@ const home = () => {
             <HeroSection />
             <BrowseCategories />
             <TrendingServices />
+            <HowItWorks />
+            <TopFreelancers />
+            <Testimonials />
+            <LatestBlog />
             
             
         </div>

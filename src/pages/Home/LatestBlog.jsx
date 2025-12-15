@@ -1,6 +1,3 @@
-
-
-
 const blogPosts = [
   {
     title: "Top 10 Freelancing Tips",
@@ -24,38 +21,39 @@ const blogPosts = [
 
 const LatestBlog = () => {
   return (
-    <section className="py-20 bg-base-200 text-center">
-      <div className="container mx-auto">
-        <motion.h2
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="text-3xl font-bold mb-12"
-        >
-          Latest Blog & News
-        </motion.h2>
+    <section className="relative py-20">
+      {/* Gradient Background */}
+      <div className="absolute inset-0 bg-gradient-to-r from-blue-800 via-cyan-600 to-purple-600 opacity-90 -z-10"></div>
 
+      <div className="container mx-auto text-center relative z-10">
+        {/* Heading */}
+        <h2 className="text-3xl md:text-4xl font-bold text-white mb-14">
+          Latest Blog & News
+        </h2>
+
+        {/* Blog Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {blogPosts.map((post, index) => (
-            <motion.div
+            <div
               key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              whileHover={{ scale: 1.03 }}
-              transition={{ delay: index * 0.1, duration: 0.5 }}
-              className="bg-base-100 shadow-lg rounded-xl overflow-hidden cursor-pointer"
+              className="bg-white/15 backdrop-blur-lg rounded-2xl overflow-hidden shadow-xl transition hover:-translate-y-2 hover:shadow-2xl cursor-pointer"
             >
               <img
                 src={post.image}
                 alt={post.title}
                 className="w-full h-48 object-cover"
               />
+
               <div className="p-6 text-left">
-                <p className="text-sm text-gray-400 mb-2">{post.date}</p>
-                <h3 className="font-bold text-xl mb-2">{post.title}</h3>
-                <p className="text-gray-600">{post.desc}</p>
+                <p className="text-sm text-gray-200 mb-2">{post.date}</p>
+                <h3 className="font-semibold text-xl text-white mb-2">
+                  {post.title}
+                </h3>
+                <p className="text-gray-100 text-sm">
+                  {post.desc}
+                </p>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>
